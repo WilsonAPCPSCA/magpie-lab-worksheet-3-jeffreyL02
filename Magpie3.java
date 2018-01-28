@@ -1,3 +1,4 @@
+package Work;
 /**
  * A program to carry on conversations with a human user.
  * This version: 
@@ -30,9 +31,8 @@ public class Magpie3
 	public String getResponse(String statement)
 	{
 		String response = "";
-		if (statement.length() == 0)
-		{
-			response = "Say something, please.";
+		if((statement.trim()).length() == 0){
+			response = "Type something you piece of poop.";
 		}
 		else if (findKeyword(statement, "no") >= 0)
 		{
@@ -44,6 +44,28 @@ public class Magpie3
 				|| findKeyword(statement, "brother") >= 0)
 		{
 			response = "Tell me more about your family.";
+		}
+		else if (statement.indexOf("dog") >= 0 
+				|| statement.indexOf("cat") >= 0)
+		{
+			response = "Tell me more about your pets.";
+		}
+		else if (statement.indexOf("Mrs. Bushyeager") >= 0 
+				|| statement.indexOf("Mr. Keith Kwong") >= 0)
+		{
+			response = "Tell me more about your teachers.";
+		}
+		else if (statement.indexOf("school") >= 0)
+		{
+			response = "Yea, life does suck.";
+		}
+		else if (statement.indexOf("you") >= 0)
+		{
+			response = "Sorry, I don't want to talk about myself or what I think.";
+		}
+		else if (statement.indexOf("food") >= 0)
+		{
+			response = "Feed me.";
 		}
 		else
 		{
